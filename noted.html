@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="noted.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap">
+    <script src="https://kit.fontawesome.com/c7f61e4a31.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <br>
+        <br>
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a><br>
+        <a href="#"><i class="fas fa-info-circle"></i> About</a><br>
+        <a href="noted.html"><i class="fas fa-pen-nib"></i> Start Noting!</a><br>
+        <a href="#"><i class="fas fa-phone"></i> Contact</a><br>
+        <a href="#"><i class="fas fa-comment"></i> Feedback</a><br>
+    </div>
+    <br>
+    <span class="openbtn" onclick="openNav()">&#9776;</span>
+    <div class="Card">
+
+        <h1><b>Create Notes</b></h1>
+        <textarea id="ctitle" rows="3" cols="22"></textarea>
+        <br>
+        <textarea name="styled-textarea" id="addTxt" rows="18" cols="30"></textarea>
+        <br><br>
+        <button class="btn btn-primary" id="addBtn">Add Note</button>
+        <br>
+        <br>
+        <h3><b> Notes Bucket </b></h3>
+    </div>
+    <br>
+    <div style="text-align: center;" id="notes" class="row container-fluid">
+
+    </div>
+    <script src="noted.js"></script>
+</body>
+
+</html>
