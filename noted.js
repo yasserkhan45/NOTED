@@ -1,9 +1,20 @@
-//JavaScript Code
-
-let addBtn = document.getElementById("addBtn");
-addBtn.addEventListener("click", function (e) {
+ function check (e) {
   let addTxt = document.getElementById("addTxt");
   let ctitle = document.getElementById("ctitle");
+  var d=parseInt(ctitle.value[0]);
+  if(addTxt.value=="" || ctitle.value=="")
+  { 
+    console.log("alert");
+    alert("Please enter Title and Content both.");
+    return false;
+  }
+  else if(Number.isInteger(d))
+  {
+    alert("Title can't have first character a digit.");
+    return false;
+  }
+  else
+  {
   let notes = localStorage.getItem("notes");
   if (notes == null)
     notesObj = [];
@@ -16,12 +27,15 @@ addBtn.addEventListener("click", function (e) {
   localStorage.setItem("notes", JSON.stringify(notesObj));  //Converting JavaScript object into string
   addTxt.value = "";
   ctitle.value = "";
+  console.log("Hello");
   show();
-});
+}
+ }
 
 // Function to show elements from localStorage
 
 function show() {
+  console.log("Show f");
   let notes = localStorage.getItem("notes");
   if (notes == null)
     notesObj = [];
@@ -91,4 +105,3 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-
